@@ -9,6 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Iconos\facebook.png" />
+    <None Remove="Resources\Iconos\googleplus.png" />
+    <None Remove="Resources\Iconos\instagram.png" />
+    <None Remove="Resources\Iconos\twitter.png" />
+    <None Remove="Resources\Imagenes\logo_seker.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MaterialDesignThemes.MahApps" Version="5.3.0" />
   </ItemGroup>
 
@@ -19,8 +27,14 @@
     <Folder Include="Frontend\ControlUsuario\" />
     <Folder Include="MVM\" />
     <Folder Include="Resources\Estilos\" />
-    <Folder Include="Resources\Iconos\" />
-    <Folder Include="Resources\Imagenes\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Iconos\facebook.png" />
+    <Resource Include="Resources\Iconos\googleplus.png" />
+    <Resource Include="Resources\Iconos\instagram.png" />
+    <Resource Include="Resources\Iconos\twitter.png" />
+    <Resource Include="Resources\Imagenes\logo_seker.png" />
   </ItemGroup>
 
 </Project>

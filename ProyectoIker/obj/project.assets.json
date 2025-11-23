@@ -380,24 +380,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\windows10\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\IKERCATALA\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\ProyectoIker.csproj",
+      "projectUniqueName": "C:\\Users\\IKERCATALA\\source\\repos\\ProyectoIker\\ProyectoIker\\ProyectoIker.csproj",
       "projectName": "ProyectoIker",
-      "projectPath": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\ProyectoIker.csproj",
-      "packagesPath": "C:\\Users\\windows10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\obj\\",
+      "projectPath": "C:\\Users\\IKERCATALA\\source\\repos\\ProyectoIker\\ProyectoIker\\ProyectoIker.csproj",
+      "packagesPath": "C:\\Users\\IKERCATALA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\IKERCATALA\\source\\repos\\ProyectoIker\\ProyectoIker\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\windows10\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\IKERCATALA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

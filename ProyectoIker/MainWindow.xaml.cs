@@ -20,5 +20,13 @@ namespace ProyectoIker
         {
             InitializeComponent();
         }
+
+        private void btnCerrarSesion_Click(object sender, RoutedEventArgs e)
+        {
+            Window loginWindow = new Frontend.Dialogos.Login();
+            loginWindow.Show();
+            this.Close();
+
+        }
     }
 }

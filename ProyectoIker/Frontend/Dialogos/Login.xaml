@@ -3,10 +3,110 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ProyectoIker.Frontend.Dialogos"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:local="clr-namespace:ProyectoIker"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="Login"
+        Height="500" Width="800"
+        Background="#FAFAFA">
+
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Parte izquierda -->
+        <StackPanel Orientation="Vertical" Margin="0,40,0,0" Grid.Column="0" Width="290">
+            <TextBlock Text="BIENVENIDO A"
+                       HorizontalAlignment="Center" FontWeight="Bold"
+                       FontSize="12" Foreground="#212121"/>
+            <TextBlock Text="Seker"
+                       HorizontalAlignment="Center" FontWeight="Normal" FontSize="25"
+                       Foreground="#2196F3" />
+            <Separator></Separator>
+            <TextBlock Text="Introduce tu usuario y contraseña para acceder."
+                       TextWrapping="WrapWithOverflow" HorizontalAlignment="Center" TextAlignment="Center" 
+                       Foreground="#757575" Margin="0,0,0,20"/>
+
+            <!-- Usuario -->
+            <TextBox HorizontalAlignment="Center" Width="275" Margin="0,10,0,0"   
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"    
+                     materialDesign:TextFieldAssist.HasClearButton="True"   
+                     materialDesign:TextFieldAssist.TextFieldCornerRadius="25" 
+                     Foreground="#212121" BorderBrush="#BDBDBD">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Account" />
+                        <TextBlock>Usuario</TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+
+            <!-- Contraseña -->
+            <PasswordBox HorizontalAlignment="Center" Width="275" Margin="0,10,0,0"
+                         Style="{StaticResource MaterialDesignOutlinedPasswordBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"   
+                         materialDesign:TextFieldAssist.TextFieldCornerRadius="25" 
+                         Foreground="#212121" BorderBrush="#BDBDBD">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Lock" />
+                        <TextBlock Text="Contraseña"/>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </PasswordBox>
+
+            <!-- Botón LOGIN -->
+            <Button Width="275" x:Name="btnLogin" Click="btnLogin_Click"
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+                    materialDesign:ButtonAssist.CornerRadius="20"
+                    Background="#2196F3" Margin="0,20,0,10">
+                <TextBlock Text="LOGIN" FontWeight="Bold" Foreground="White"/>
+            </Button>
+
+            <!-- Registro -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="¿No tienes cuenta?" VerticalAlignment="Center"/>
+                <Button Content="Regístrate" VerticalAlignment="Center" Background="Transparent" BorderBrush="Transparent"
+                        Foreground="#2196F3" FontSize="11"/>
+            </StackPanel>
+
+            <!-- Separador -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,20">
+                <Separator Background="#E0E0E0" Width="120"/>
+                <TextBlock Text="O" Margin="10,0,10,0" Foreground="#757575"/>
+                <Separator Background="#E0E0E0" Width="120"/>
+            </StackPanel>
+
+            <!-- Redes sociales -->
+            <TextBlock Text="Inicia sesión con redes sociales" HorizontalAlignment="Center" Foreground="#757575" FontSize="10" Margin="0,0,0,5"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
+                        Background="White" Width="35" Height="35" BorderBrush="#E0E0E0">
+                    <Image Source="/Resources/Iconos/facebook.png" Width="20"/>
+                </Button>
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
+                        Background="White" Width="35" Height="35" Margin="10,0,0,0" BorderBrush="#E0E0E0">
+                    <Image Source="/Resources/Iconos/twitter.png" Width="20"/>
+                </Button>
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
+                        Background="White" Width="35" Height="35" Margin="10,0,0,0" BorderBrush="#E0E0E0">
+                    <Image Source="/Resources/Iconos/googleplus.png" Width="20"/>
+                </Button>
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
+                        Background="White" Width="35" Height="35" Margin="10,0,0,0" BorderBrush="#E0E0E0">
+                    <Image Source="/Resources/Iconos/instagram.png" Width="40"/>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Parte derecha solo imagen -->
+        <Grid Grid.Column="1" Background="#ECEFF1">
+            <Image Source="/Resources/Imagenes/logo_seker.png" Width="725" Height="507" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
     </Grid>
 </Window>

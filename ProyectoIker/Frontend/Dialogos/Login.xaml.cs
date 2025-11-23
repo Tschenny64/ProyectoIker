@@ -23,5 +23,12 @@ namespace ProyectoIker.Frontend.Dialogos
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            Window mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
     }
 }
