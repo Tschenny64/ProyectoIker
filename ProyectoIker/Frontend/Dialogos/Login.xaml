@@ -10,6 +10,8 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         Title="Login"
+        x:Name="ventanaLogin"
+        Loaded="ventanaLogin_Loaded"
         Height="500" Width="800"
         Background="#FAFAFA">
 
@@ -33,7 +35,9 @@
                        Foreground="#757575" Margin="0,0,0,20"/>
 
             <!-- Usuario -->
-            <TextBox HorizontalAlignment="Center" Width="275" Margin="0,10,0,0"   
+            <TextBox HorizontalAlignment="Center" Width="275" Margin="0,10,0,0"  
+                     x:Name="txtUsuario"
+                     TextChanged="txtUsuario_TextChanged"
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"    
                      materialDesign:TextFieldAssist.HasClearButton="True"   
                      materialDesign:TextFieldAssist.TextFieldCornerRadius="25" 
@@ -48,6 +52,7 @@
 
             <!-- Contraseña -->
             <PasswordBox HorizontalAlignment="Center" Width="275" Margin="0,10,0,0"
+                         x:Name="txtPassword"
                          Style="{StaticResource MaterialDesignOutlinedPasswordBox}"
                          materialDesign:TextFieldAssist.HasClearButton="True"   
                          materialDesign:TextFieldAssist.TextFieldCornerRadius="25" 

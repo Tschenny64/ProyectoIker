@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\IKERCATALA\\source\\repos\\ProyectoIker\\ProyectoIker\\ProyectoIker.csproj": {}
+    "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\ProyectoIker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\IKERCATALA\\source\\repos\\ProyectoIker\\ProyectoIker\\ProyectoIker.csproj": {
+    "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\ProyectoIker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IKERCATALA\\source\\repos\\ProyectoIker\\ProyectoIker\\ProyectoIker.csproj",
+        "projectUniqueName": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\ProyectoIker.csproj",
         "projectName": "ProyectoIker",
-        "projectPath": "C:\\Users\\IKERCATALA\\source\\repos\\ProyectoIker\\ProyectoIker\\ProyectoIker.csproj",
-        "packagesPath": "C:\\Users\\IKERCATALA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IKERCATALA\\source\\repos\\ProyectoIker\\ProyectoIker\\obj\\",
+        "projectPath": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\ProyectoIker.csproj",
+        "packagesPath": "C:\\Users\\windows10\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\IKERCATALA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\windows10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,6 +53,28 @@
             "MaterialDesignThemes.MahApps": {
               "target": "Package",
               "version": "[5.3.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.21, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.21, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[8.0.21, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "MySql.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.20, )"
             }
           },
           "imports": [
