@@ -16,6 +16,7 @@ namespace ProyectoIker
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -26,6 +27,11 @@ namespace ProyectoIker
             Window loginWindow = new Frontend.Dialogos.Login();
             loginWindow.Show();
             this.Close();
+
+        }
+
+        private void btnProductos_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }

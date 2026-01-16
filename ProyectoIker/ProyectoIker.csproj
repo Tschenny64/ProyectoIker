@@ -30,9 +30,6 @@
 
   <ItemGroup>
     <Folder Include="Backend\Modulos\" />
-    <Folder Include="Backend\Modelo\" />
-    <Folder Include="Frontend\ControlUsuario\" />
-    <Folder Include="MVM\" />
     <Folder Include="Resources\Estilos\" />
   </ItemGroup>
 

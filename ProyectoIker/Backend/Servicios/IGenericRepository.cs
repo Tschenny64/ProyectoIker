@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace UD4_Ejemplo1.Backend.Servicios
+namespace ProyectoIker.Backend.Servicios
 {
     /// <summary>
     /// Contrato de repositorio genérico para operaciones CRUD comunes usando Entity Framework Core.
@@ -34,5 +34,7 @@ namespace UD4_Ejemplo1.Backend.Servicios
         IQueryable<T> Query(
             bool asNoTracking = true,
             params Expression<Func<T, object>>[] includes);
+        Task<IEnumerable<T>> GetAllAsync();
+        Task RemoveByIdAsync(int id);
     }
 }

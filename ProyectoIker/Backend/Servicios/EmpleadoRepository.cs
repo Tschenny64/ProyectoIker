@@ -6,8 +6,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UD4_Ejemplo1.Backend.Servicios;
-
 namespace ProyectoIker.Backend.Servicios
 {
     public class EmpleadoRepository : GenericRepository<Empleado>, IEmpleadoRepository

@@ -3,9 +3,9 @@ using Microsoft.Extensions.Logging;
 using ProyectoIker.Backend.Modelo;
 using System.Linq.Expressions;
 
-namespace UD4_Ejemplo1.Backend.Servicios
-    {
-        public class GenericRepository<T> : IGenericRepository<T> where T : class
+namespace ProyectoIker.Backend.Servicios
+{
+    public class GenericRepository<T> : IGenericRepository<T> where T : class
         {
             protected readonly DbContext _context;
             protected readonly DbSet<T> _dbSet;
@@ -125,5 +125,15 @@ namespace UD4_Ejemplo1.Backend.Servicios
 
                 return query;
             }
+
+        public Task<IEnumerable<T>> GetAllAsync()
+        {
+            throw new NotImplementedException();
         }
+
+        public Task RemoveByIdAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+    }
     }

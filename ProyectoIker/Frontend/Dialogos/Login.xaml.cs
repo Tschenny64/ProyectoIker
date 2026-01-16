@@ -15,7 +15,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ProyectoIker.Backend.Servicios;
 using Microsoft.Extensions.Logging;
-using UD4_Ejemplo1.Backend.Servicios;
 
 
 namespace ProyectoIker.Frontend.Dialogos
