@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProyectoIker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd042a3f6385c190598f118b0a46c3a562545e21")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b88f41af21ff78e3c5ac0e06b62c5353acbf710")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProyectoIker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProyectoIker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
