@@ -1,4 +1,7 @@
-﻿using System.Text;
+﻿using Microsoft.Extensions.DependencyInjection;
+using ProyectoIker.Frontend.ControlUsuario;
+using ProyectoIker.Frontend.Dialogos;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,23 +19,24 @@ namespace ProyectoIker
     /// </summary>
     public partial class MainWindow : Window
     {
-        
-        public MainWindow()
+        private DialogoProductos _dialogoProductos;
+        private readonly IServiceProvider _serviceProvider;
+        private UCProductos _ucProductos;
+
+        public MainWindow(DialogoProductos dialogoProductos,
+                          IServiceProvider serviceProvider,
+                          UCProductos ucProductos
+                            )
         {
             InitializeComponent();
+            _dialogoProductos = dialogoProductos;
+            _ucProductos = ucProductos;
         }
 
-        private void btnCerrarSesion_Click(object sender, RoutedEventArgs e)
+        private void btnAnyadirProducto_Click(object sender, RoutedEventArgs e)
         {
-            Window loginWindow = new Frontend.Dialogos.Login();
-            loginWindow.Show();
-            this.Close();
-
-        }
-
-        private void btnProductos_Click(object sender, RoutedEventArgs e)
-        {
-
+            _dialogoProductos.ShowDialog();
+            _dialogoProductos = _serviceProvider.GetRequiredService<DialogoProductos>();
         }
     }
 }

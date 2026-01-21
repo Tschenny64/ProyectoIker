@@ -5,8 +5,31 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProyectoIker.Frontend.ControlUsuario"
              mc:Ignorable="d" 
+             x:Name="ucProductos"
+             Loaded="ucProductos_Loaded"
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+
+    <DockPanel>
+        <Grid DockPanel.Dock="Top">
+            <TextBlock Text="LISTADO DE PRODUCTOS"
+                       FontSize="25" FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="20"
+                       Foreground="Purple"/>
+        </Grid>
+        <Grid>
+            <DataGrid ItemsSource="{ Binding listaProductos}"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      ColumnWidth="*">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="NOMBRE" Binding="{Binding Nombre}"/>
+                    <DataGridTextColumn Header="DESCRIPCIÓN" Binding="{Binding Descripcion}"/>
+                    <DataGridTextColumn Header="PRECIO UNIDAD" Binding="{Binding Precio}"/>
+                    <DataGridTextColumn Header="STOCK" Binding="{Binding Stock}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </DockPanel>
 </UserControl>

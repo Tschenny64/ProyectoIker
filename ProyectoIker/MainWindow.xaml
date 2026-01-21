@@ -7,54 +7,105 @@
         xmlns:local="clr-namespace:ProyectoIker"
         mc:Ignorable="d"
         WindowStyle="None"
-        Title="Seker" Height="600" Width="1000"
+        Title="Seker"
+        Height="600"
+        Width="1000"
         WindowStartupLocation="CenterScreen"
         Background="#F5F5F5">
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0" Background="#263238" VerticalAlignment="Stretch">
-            <TextBlock Text="Seker" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,15,0,0"/>
+        <!-- MENÚ LATERAL -->
+        <StackPanel Grid.Column="0" Background="#263238">
+            <TextBlock Text="Seker"
+                       Foreground="White"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,15,0,0"/>
+
             <Separator Background="#455A64" Margin="10"/>
 
-            <Button Content="Productos" 
-                    Style="{StaticResource MaterialDesignFlatButton}" 
-                    Foreground="White"
-                    x:Name="btnProductos"
-                    Click="btnProductos_Click"
-                    Margin="10" />
-            
-            
-            <Button Content="Clientes" Style="{StaticResource MaterialDesignFlatButton}" Foreground="White" Margin="10" />
-            <Button Content="Empleados" Style="{StaticResource MaterialDesignFlatButton}" Foreground="White" Margin="10" />
-            <Button Content="Reparaciones" Style="{StaticResource MaterialDesignFlatButton}" Foreground="White" Margin="10" />
-            <Button Content="Promociones" Style="{StaticResource MaterialDesignFlatButton}" Foreground="White" Margin="10" />
-            <Button Content="Ventas" Style="{StaticResource MaterialDesignFlatButton}" Foreground="White" Margin="10" />
+            <!-- PRODUCTOS -->
+            <Expander Header="Productos" Foreground="White" Margin="10">
+                <StackPanel>
+                    <Button Content="Listar productos"
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            Foreground="White"/>
+                    <Button Content="Añadir producto" x:Name="btnAnyadirProducto" Click="btnAnyadirProducto_Click"
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            Foreground="White"/>
+                </StackPanel>
+            </Expander>
 
-            <StackPanel VerticalAlignment="Bottom" Margin="10">
-                <Separator Background="#455A64"/>
-                <Button Content="Cerrar sesión" Style="{StaticResource MaterialDesignFlatButton}" x:Name="btnCerrarSesion" Click="btnCerrarSesion_Click" Foreground="White" />
-            </StackPanel>
+            <!-- EMPLEADOS -->
+            <Expander Header="Empleados" Foreground="White" Margin="10">
+                <StackPanel>
+                    <Button Content="Listar empleados"
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            Foreground="White"/>
+                    <Button Content="Añadir empleado"
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            Foreground="White"/>
+                </StackPanel>
+            </Expander>
+
+            <!-- REPARACIONES -->
+            <Expander Header="Reparaciones" Foreground="White" Margin="10">
+                <StackPanel>
+                    <Button Content="Listar reparaciones"
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            Foreground="White"/>
+                    <Button Content="Añadir reparación"
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            Foreground="White"/>
+                </StackPanel>
+            </Expander>
+
+            <!-- PROMOCIONES -->
+            <Expander Header="Promociones" Foreground="White" Margin="10">
+                <StackPanel>
+                    <Button Content="Listar promociones"
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            Foreground="White"/>
+                    <Button Content="Añadir promoción"
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            Foreground="White"/>
+                </StackPanel>
+            </Expander>
         </StackPanel>
 
+        <!-- CONTENIDO PRINCIPAL -->
         <Grid Grid.Column="1" Margin="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <!-- aqui saldra bienvenido y el usuario que ha iniciado sesion -->
-            <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Right">
-                <TextBlock Text="Bienvenido, Iker" FontSize="16" FontWeight="SemiBold" Foreground="#212121" Margin="0,0,10,0"/>
-                <materialDesign:PackIcon Kind="AccountCircle" Width="30" Height="30" Foreground="#2196F3"/>
+            <StackPanel Orientation="Horizontal"
+                        Grid.Row="0"
+                        HorizontalAlignment="Right">
+                <TextBlock Text="Bienvenido, Iker"
+                           FontSize="16"
+                           FontWeight="SemiBold"
+                           Foreground="#212121"
+                           Margin="0,0,10,0"/>
+                <materialDesign:PackIcon Kind="AccountCircle"
+                                         Width="30"
+                                         Height="30"
+                                         Foreground="#2196F3"/>
             </StackPanel>
 
-            <!-- Contenido -->
-            <Border Grid.Row="1" Background="White" CornerRadius="10" Padding="20" Margin="0,20,0,0">
-                
+            <Border Grid.Row="1"
+                    Background="White"
+                    CornerRadius="10"
+                    Padding="20"
+                    Margin="0,20,0,0">
+                <!-- CONTENIDO DINÁMICO -->
             </Border>
         </Grid>
     </Grid>

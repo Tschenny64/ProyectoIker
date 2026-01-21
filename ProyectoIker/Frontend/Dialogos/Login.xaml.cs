@@ -24,64 +24,43 @@ namespace ProyectoIker.Frontend.Dialogos
     /// </summary>
     public partial class Login : Window
     {
-        private ProyectoContext _contexto;
-        private EmpleadoRepository _empleadoRepository;
-        private ILogger<GenericRepository<Empleado>> _logger;
+        private readonly EmpleadoRepository _empleadoRepository;
+        private readonly MainWindow _mainWindow;
         public Login()
         {
             InitializeComponent();
-            _contexto = new ProyectoContext();
+        }
+        public Login(EmpleadoRepository empleadoRepository,
+                     MainWindow mainWindow)
+        {
+            InitializeComponent();
+            _mainWindow = mainWindow;
+            _empleadoRepository = empleadoRepository;
         }
 
         private async void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            string usuario = txtUsuario.Text.Trim();
-            string contrasena = txtPassword.Password.Trim();
 
             // Validar que los campos no estén vacíos
-            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contrasena))
+            if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(passClave.Password))
             {
-                MessageBox.Show("Por favor, completa todos los campos.", "Campos vacíos", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
-            _logger = LoggerFactory.Create(builder =>
-            {
-                builder.AddConsole();
-            }).CreateLogger<GenericRepository<Empleado>>();
-
-            _empleadoRepository = new EmpleadoRepository(_contexto, _logger);
-
-            if (await _empleadoRepository.LoginAsync(txtUsuario.Text, txtPassword.Password))
-            {
-                // si la autenticacion es correcta, abrimos la ventana principal
-                //pasando el usuario logueado
-                Window mainWindow = new MainWindow();
-                mainWindow.Show();
-                this.Close();
+                bool accesoPermitido = await _empleadoRepository.LoginAsync(txtUsuario.Text, passClave.Password);
+                if (accesoPermitido)
+                {
+                    _mainWindow.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Por favor introduce usuario y clave.", "Error de autenticación",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrectos.", "Error de autenticación", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Por favor introduce usuario y clave.", "Error de autenticación",
+                MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
-
-        }
-        private void ventanaLogin_Loaded(object sender, RoutedEventArgs e)
-        {
-            //instanciamos el contexto y el repositorio de usuarios
-            //el contexto nos permite conectar con la base de datos
-            _contexto = new ProyectoContext();
-            // El logger nos permite registrar eventos y errores
-            // crear un logger para el repositorio genérico de usuarios
-            _logger = LoggerFactory.Create(builder =>
-            {
-                builder.AddConsole();
-            }).CreateLogger<GenericRepository<Empleado>>();
-            _empleadoRepository = new EmpleadoRepository(_contexto, _logger);
-        }
-
-        private void txtUsuario_TextChanged(object sender, TextChangedEventArgs e)
-        {
 
         }
     }
