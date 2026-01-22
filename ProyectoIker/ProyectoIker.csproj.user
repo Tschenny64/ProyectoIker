@@ -17,6 +17,9 @@
     <Compile Update="Frontend\ControlUsuario\UCReparaciones.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Frontend\Dialogos\DialogoEmpleado.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Frontend\Dialogos\DialogoProductos.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

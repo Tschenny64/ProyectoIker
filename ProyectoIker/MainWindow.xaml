@@ -31,9 +31,10 @@
             <Separator Background="#455A64" Margin="10"/>
 
             <!-- PRODUCTOS -->
-            <Expander Header="Productos" Foreground="White" Margin="10">
+            <Expander Header="Productos" Foreground="White" Margin="10" Background="Transparent">
                 <StackPanel>
                     <Button Content="Listar productos"
+                            Click="UCProductos_Click"
                             Style="{StaticResource MaterialDesignFlatButton}"
                             Foreground="White"/>
                     <Button Content="Añadir producto" x:Name="btnAnyadirProducto" Click="btnAnyadirProducto_Click"
@@ -43,9 +44,10 @@
             </Expander>
 
             <!-- EMPLEADOS -->
-            <Expander Header="Empleados" Foreground="White" Margin="10">
+            <Expander Header="Empleados" Foreground="White" Margin="10" Background="Transparent">
                 <StackPanel>
                     <Button Content="Listar empleados"
+                            Click="UCEmpleados_Click"
                             Style="{StaticResource MaterialDesignFlatButton}"
                             Foreground="White"/>
                     <Button Content="Añadir empleado"
@@ -55,9 +57,10 @@
             </Expander>
 
             <!-- REPARACIONES -->
-            <Expander Header="Reparaciones" Foreground="White" Margin="10">
+            <Expander Header="Reparaciones" Foreground="White" Margin="10" Background="Transparent">
                 <StackPanel>
                     <Button Content="Listar reparaciones"
+                            Click="UCReparaciones_Click"
                             Style="{StaticResource MaterialDesignFlatButton}"
                             Foreground="White"/>
                     <Button Content="Añadir reparación"
@@ -67,7 +70,7 @@
             </Expander>
 
             <!-- PROMOCIONES -->
-            <Expander Header="Promociones" Foreground="White" Margin="10">
+            <Expander Header="Promociones" Foreground="White" Margin="10" Background="Transparent">
                 <StackPanel>
                     <Button Content="Listar promociones"
                             Style="{StaticResource MaterialDesignFlatButton}"
@@ -105,7 +108,16 @@
                     CornerRadius="10"
                     Padding="20"
                     Margin="0,20,0,0">
+                <Grid x:Name="panelPrincipal">
+                    <TextBlock Text="Selecciona una opción del menú lateral"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Foreground="#757575"/>
+                </Grid>
                 <!-- CONTENIDO DINÁMICO -->
+                
             </Border>
         </Grid>
     </Grid>

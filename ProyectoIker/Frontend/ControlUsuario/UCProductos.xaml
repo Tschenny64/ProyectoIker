@@ -23,11 +23,11 @@
                       CanUserAddRows="False"
                       ColumnWidth="*">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="ID" Binding="{Binding CodigoUnico}"/>
                     <DataGridTextColumn Header="NOMBRE" Binding="{Binding Nombre}"/>
-                    <DataGridTextColumn Header="DESCRIPCIÓN" Binding="{Binding Descripcion}"/>
-                    <DataGridTextColumn Header="PRECIO UNIDAD" Binding="{Binding Precio}"/>
-                    <DataGridTextColumn Header="STOCK" Binding="{Binding Stock}"/>
+                    <DataGridTextColumn Header="DESCRIPCIÓN" Binding="{Binding DescripcionTecnica}"/>
+                    <DataGridTextColumn Header="PRECIO UNIDAD" Binding="{Binding PrecioUnitario}"/>
+                    <DataGridTextColumn Header="STOCK" Binding="{Binding CantidadInventario}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>

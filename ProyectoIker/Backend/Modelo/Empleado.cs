@@ -48,4 +48,10 @@ public partial class Empleado
 
     [InverseProperty("Empleado")]
     public virtual ICollection<Venta> Venta { get; set; } = new List<Venta>();
+
+    override
+    public string ToString()
+    {
+        return Nombre + " " + Apellido1 + " " + Apellido2;
+    }
 }

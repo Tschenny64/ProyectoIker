@@ -1,4 +1,8 @@
-﻿using System;
+﻿using ProyectoIker.Backend.Modelo;
+using ProyectoIker.Backend.Servicios;
+using ProyectoIker.Frontend.Mensajes;
+using ProyectoIker.MVM.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +10,46 @@ using System.Threading.Tasks;
 
 namespace ProyectoIker.MVM
 {
-    internal class MVEmpleados
+    public class MVEmpleados : MVBase
     {
+        private Empleado _empleado;
+
+        private EmpleadoRepository _empleadoRepository;
+
+        private List<Empleado> _listaEmpleados;
+
+        public Empleado empleado
+        {
+            get => _empleado;
+            set => SetProperty(ref _empleado, value);
+        }
+
+
+        public MVEmpleados(EmpleadoRepository empleadoRepository)
+        {
+            _empleadoRepository = empleadoRepository;
+            _empleado = new Empleado();
+        }
+
+        public List<Empleado> listaEmpleados => _listaEmpleados;
+
+
+        public async Task Inicializa()
+        {
+            try
+            {
+                _listaEmpleados = await GetAllAsync<Empleado>(_empleadoRepository);
+
+
+            }
+            catch
+            {
+                MensajeError.Mostrar(
+                  "GESTIÓN USUARIOS",
+                  "Error al cargar datos de usuario",
+                  0);
+            }
+
+        }
     }
 }

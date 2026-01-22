@@ -4,9 +4,31 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProyectoIker.Frontend.ControlUsuario"
+             x:Name="ucReparaciones"
+             Loaded="ucReparaciones_Loaded"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <DockPanel>
+        <Grid DockPanel.Dock="Top">
+            <TextBlock Text="LISTADO DE REPARACIONES"
+                       FontSize="25" FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="20"
+                       Foreground="Purple"/>
+        </Grid>
+        <Grid>
+            <DataGrid ItemsSource="{Binding listaReparaciones}"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      ColumnWidth="*"
+                      RowDetailsVisibilityMode="VisibleWhenSelected">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID REPARACIÓN" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="DESCRIPCION" Binding="{Binding Descripcion}"/>
+                    <DataGridTextColumn Header="OBSERVACIONES" Binding="{Binding Observaciones}"/>
+                    <DataGridTextColumn Header="TIEMPO" Binding="{Binding Tiempo}"/> 
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </DockPanel>
 </UserControl>

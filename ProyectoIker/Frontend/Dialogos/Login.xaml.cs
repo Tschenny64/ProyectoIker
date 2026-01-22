@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ProyectoIker.Backend.Servicios;
 using Microsoft.Extensions.Logging;
+using MahApps.Metro.Controls;
 
 
 namespace ProyectoIker.Frontend.Dialogos
@@ -22,14 +23,10 @@ namespace ProyectoIker.Frontend.Dialogos
     /// <summary>
     /// Interaction logic for Login.xaml
     /// </summary>
-    public partial class Login : Window
+    public partial class Login : MetroWindow
     {
         private readonly EmpleadoRepository _empleadoRepository;
         private readonly MainWindow _mainWindow;
-        public Login()
-        {
-            InitializeComponent();
-        }
         public Login(EmpleadoRepository empleadoRepository,
                      MainWindow mainWindow)
         {
@@ -41,26 +38,33 @@ namespace ProyectoIker.Frontend.Dialogos
         private async void btnLogin_Click(object sender, RoutedEventArgs e)
         {
 
-            // Validar que los campos no estén vacíos
-            if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(passClave.Password))
+            if (!string.IsNullOrEmpty(txtUsuario.Text) && !string.IsNullOrEmpty(passClave.Password))
             {
+                //Añadimos el accesoPermitido para poder validar el usuario y la contraseña
+                //y solo si esta en la base de datos podrá iniciar sesion
+                // Validación directa usando los controles txtUsuario y passClave
                 bool accesoPermitido = await _empleadoRepository.LoginAsync(txtUsuario.Text, passClave.Password);
+                //Tambien añadimos este if
                 if (accesoPermitido)
                 {
                     _mainWindow.Show();
                     this.Close();
                 }
+
+                //y añadimos el else en el caso de que no este en la bbdd
                 else
                 {
                     MessageBox.Show("Por favor introduce usuario y clave.", "Error de autenticación",
                     MessageBoxButton.OK, MessageBoxImage.Error);
                 }
+
             }
             else
             {
                 MessageBox.Show("Por favor introduce usuario y clave.", "Error de autenticación",
-                MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBoxButton.OK, MessageBoxImage.Error);
             }
+
 
         }
     }

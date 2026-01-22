@@ -55,7 +55,7 @@ namespace ProyectoIker.Frontend.Dialogos
 
         private void btnCancelarProducto_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            DialogResult = false;
         }
     }
 }

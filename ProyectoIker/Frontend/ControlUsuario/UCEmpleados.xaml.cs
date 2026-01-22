@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoIker.MVM;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,18 @@ namespace ProyectoIker.Frontend.ControlUsuario
     /// </summary>
     public partial class UCEmpleados : UserControl
     {
-        public UCEmpleados()
+        private MVEmpleados _mvEmpleados;
+        public UCEmpleados(MVEmpleados mvEmpleado)
         {
             InitializeComponent();
+            _mvEmpleados = mvEmpleado;
+        }
+
+        private async void ucEmpleados_Loaded(object sender, RoutedEventArgs e)
+        {
+            await _mvEmpleados.Inicializa();
+            this.DataContext = _mvEmpleados;
+
         }
     }
 }

@@ -1,6 +1,8 @@
-﻿using System;
+﻿using ProyectoIker.MVM;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,9 +22,18 @@ namespace ProyectoIker.Frontend.ControlUsuario
     /// </summary>
     public partial class UCReparaciones : UserControl
     {
-        public UCReparaciones()
+        private MVReparaciones _mvReparaciones;
+        public UCReparaciones(MVReparaciones mvReparaciones)
         {
             InitializeComponent();
+            _mvReparaciones = mvReparaciones;
+        }
+
+        private async void ucReparaciones_Loaded(object sender, RoutedEventArgs e)
+        {
+            await _mvReparaciones.Inicializa();
+            this.DataContext = _mvReparaciones;
+
         }
     }
 }
