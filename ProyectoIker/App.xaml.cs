@@ -52,6 +52,9 @@ namespace ProyectoIker
             services.AddTransient<UCReparaciones>();
             services.AddTransient<UCPromociones>();
             services.AddTransient<DialogoProductos>();
+            services.AddTransient<DialogoEmpleados>();
+            services.AddTransient<DialogoReparaciones>();
+            services.AddTransient<DialogoPromociones>();
 
             services.AddTransient<MVProductos>();
             services.AddTransient<MVEmpleados>();

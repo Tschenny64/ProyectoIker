@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using ProyectoIker.MVM.Base;
 
 namespace ProyectoIker.Backend.Modelo;
 
 [Table("productos")]
 [Index("CategoriaId", Name = "Categoria_ID")]
-public partial class Producto
+public partial class Producto : ValidatableViewModel
 {
     [Key]
     [Column("Codigo_Unico")]

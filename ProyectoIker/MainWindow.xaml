@@ -6,7 +6,6 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:ProyectoIker"
         mc:Ignorable="d"
-        WindowStyle="None"
         Title="Seker"
         Height="600"
         Width="1000"
@@ -51,6 +50,7 @@
                             Style="{StaticResource MaterialDesignFlatButton}"
                             Foreground="White"/>
                     <Button Content="Añadir empleado"
+                            Click="btnAnyadirEmpleado_Click"
                             Style="{StaticResource MaterialDesignFlatButton}"
                             Foreground="White"/>
                 </StackPanel>
@@ -64,6 +64,7 @@
                             Style="{StaticResource MaterialDesignFlatButton}"
                             Foreground="White"/>
                     <Button Content="Añadir reparación"
+                            Click="btnAnyadirReparacion_Click"
                             Style="{StaticResource MaterialDesignFlatButton}"
                             Foreground="White"/>
                 </StackPanel>
@@ -77,6 +78,7 @@
                             Style="{StaticResource MaterialDesignFlatButton}"
                             Foreground="White"/>
                     <Button Content="Añadir promoción"
+                            Click="btnAnyadirPromocion_Click"
                             Style="{StaticResource MaterialDesignFlatButton}"
                             Foreground="White"/>
                 </StackPanel>
@@ -93,11 +95,13 @@
             <StackPanel Orientation="Horizontal"
                         Grid.Row="0"
                         HorizontalAlignment="Right">
-                <TextBlock Text="Bienvenido, Iker"
+                <TextBlock
                            FontSize="16"
                            FontWeight="SemiBold"
                            Foreground="#212121"
-                           Margin="0,0,10,0"/>
+                           Margin="0,0,10,0">
+                    <Run Text="Bienvenido " />
+                </TextBlock>
                 <materialDesign:PackIcon Kind="AccountCircle"
                                          Width="30"
                                          Height="30"

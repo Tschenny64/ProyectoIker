@@ -184,5 +184,9 @@ C:\Users\windows10\source\repos\ProyectoIker\ProyectoIker\bin\Debug\net8.0-windo
 C:\Users\windows10\source\repos\ProyectoIker\ProyectoIker\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
 C:\Users\windows10\source\repos\ProyectoIker\ProyectoIker\bin\Debug\net8.0-windows\System.Text.Json.dll
 C:\Users\windows10\source\repos\ProyectoIker\ProyectoIker\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-C:\Users\windows10\source\repos\ProyectoIker\ProyectoIker\obj\Debug\net8.0-windows\Frontend\Dialogos\DialogoEmpleado.g.cs
-C:\Users\windows10\source\repos\ProyectoIker\ProyectoIker\obj\Debug\net8.0-windows\Frontend\Dialogos\DialogoEmpleado.baml
+C:\Users\windows10\source\repos\ProyectoIker\ProyectoIker\obj\Debug\net8.0-windows\Frontend\Dialogos\DialogoEmpleados.g.cs
+C:\Users\windows10\source\repos\ProyectoIker\ProyectoIker\obj\Debug\net8.0-windows\Frontend\Dialogos\DialogoPromociones.g.cs
+C:\Users\windows10\source\repos\ProyectoIker\ProyectoIker\obj\Debug\net8.0-windows\Frontend\Dialogos\DialogoReparaciones.g.cs
+C:\Users\windows10\source\repos\ProyectoIker\ProyectoIker\obj\Debug\net8.0-windows\Frontend\Dialogos\DialogoEmpleados.baml
+C:\Users\windows10\source\repos\ProyectoIker\ProyectoIker\obj\Debug\net8.0-windows\Frontend\Dialogos\DialogoPromociones.baml
+C:\Users\windows10\source\repos\ProyectoIker\ProyectoIker\obj\Debug\net8.0-windows\Frontend\Dialogos\DialogoReparaciones.baml

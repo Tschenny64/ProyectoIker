@@ -1,0 +1,77 @@
+﻿<mah:MetroWindow x:Class="ProyectoIker.Frontend.Dialogos.DialogoPromociones"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProyectoIker.Frontend.Dialogos"
+      xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d"
+      x:Name="dialogoPromociones"
+      Loaded="dialogoPromociones_Loaded"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DialogoPromociones"
+      Background="Transparent">
+
+    <Grid Margin="30">
+        <Border Background="White"
+                CornerRadius="10"
+                Padding="25"
+                MaxWidth="450"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+
+            <StackPanel>
+
+                <TextBlock Text="Nueva promoción"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Margin="0,0,0,20"/>
+
+                <!-- NOMBRE -->
+                <TextBox materialDesign:HintAssist.Hint="Nombre"
+                         x:Name="txtNombrePromocion"
+                         Text="{Binding promocion.Nombre, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         Margin="0,0,0,15"/>
+
+                <!-- DESCRIPCION -->
+                <TextBox materialDesign:HintAssist.Hint="Descripción"
+                         x:Name="txtDescripcionPromocion"
+                         Text="{Binding promocion.Descripcion, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         AcceptsReturn="True"
+                         Height="80"
+                         TextWrapping="Wrap"
+                         Margin="0,0,0,15"/>
+
+                <!-- FECHA_ENVIO -->
+                <DatePicker x:Name="dpFechaEnvio"
+                            SelectedDate="{Binding promocion.FechaEnvio, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                            Margin="0,0,0,15"/>
+
+                <!-- DESCUENTO -->
+                <TextBox materialDesign:HintAssist.Hint="Descuento"
+                         x:Name="txtDescuentoPromocion"
+                         Text="{Binding promocion.Descuento, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                         PreviewTextInput="SoloNumeros"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         Margin="0,0,0,25"/>
+
+                <!-- BOTONES -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="Cancelar"
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            x:Name="btnCancelar"
+                            Click="btnCancelarPromocion_Click"
+                            Margin="0,0,10,0"/>
+                    <Button Content="Guardar"
+                            x:Name="btnGuardarPromocion"
+                            Click="btnGuardarPromocion_Click"
+                            Style="{StaticResource MaterialDesignRaisedButton}"/>
+                </StackPanel>
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</mah:MetroWindow>

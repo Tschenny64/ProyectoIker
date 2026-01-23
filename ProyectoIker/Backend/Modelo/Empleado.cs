@@ -15,9 +15,11 @@ public partial class Empleado
     public int CodigoUnico { get; set; }
 
     [StringLength(255)]
+    [Required(ErrorMessage = "El nombre es obligatorio")]
     public string? Nombre { get; set; }
 
     [StringLength(255)]
+
     public string? Apellido1 { get; set; }
 
     [StringLength(255)]
@@ -25,15 +27,19 @@ public partial class Empleado
 
     [Column("DNI")]
     [StringLength(20)]
+    [Required(ErrorMessage = "El DNI es obligatorio")]
     public string? Dni { get; set; }
 
     [StringLength(20)]
+    [Required(ErrorMessage = "El telefono es obligatorio")]
     public string? Telefono { get; set; }
 
     [StringLength(50)]
+    [Required(ErrorMessage = "El usuario es obligatorio")]
     public string? Usuario { get; set; }
 
     [StringLength(255)]
+    [Required(ErrorMessage = "La contraseña es obligatoria")]
     public string? Password { get; set; }
 
     [Column("Rol_ID")]

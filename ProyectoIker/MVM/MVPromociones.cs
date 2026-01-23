@@ -33,6 +33,40 @@ namespace ProyectoIker.MVM
             _promocion = new Promocione();
             _listaPromociones = new List<Promocione>();
         }
+        public async Task<bool> GuardarPromocionAsync()
+        {
+            bool correcto = true;
+            try
+            {
+                // CAMBIA "CodigoUnico" por la PK real de Promocione (IdPromocion, CodigoPromocion, etc.)
+                if (promocion.Id == 0)
+                {
+                    // Nueva promoción
+                    correcto = await AddAsync<Promocione>(_promocioneRepository, promocion);
+                }
+                else
+                {
+                    // Actualizar promoción existente
+                    correcto = await UpdateAsync<Promocione>(_promocioneRepository, promocion);
+                }
+
+                if (correcto)
+                {
+                    await Inicializa(); // refrescar lista
+                }
+            }
+            catch
+            {
+                MensajeError.Mostrar(
+                    "GESTION PROMOCIONES",
+                    "Error al guardar la promoción\nNo puedo conectar con la base de datos",
+                    0);
+                correcto = false;
+            }
+
+            return correcto;
+        }
+
 
         public async Task Inicializa()
         {

@@ -1,0 +1,80 @@
+﻿<mah:MetroWindow x:Class="ProyectoIker.Frontend.Dialogos.DialogoReparaciones"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProyectoIker.Frontend.Dialogos"
+      xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d"
+      x:Name="dialogoReparaciones"
+      Loaded="dialogoReparaciones_Loaded"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DialogoReparaciones"
+      Background="Transparent">
+
+    <Grid Margin="30">
+        <Border Background="White"
+                CornerRadius="10"
+                Padding="25"
+                MaxWidth="450"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+
+            <StackPanel>
+
+                <TextBlock Text="Nueva reparación"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Margin="0,0,0,20"/>
+
+                <!-- DESCRIPCION -->
+                <TextBox materialDesign:HintAssist.Hint="Descripción"
+                         x:Name="txtDescripcionReparacion"
+                         Text="{Binding reparacion.Descripcion, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         AcceptsReturn="True"
+                         Height="80"
+                         TextWrapping="Wrap"
+                         Margin="0,0,0,15"/>
+
+                <!-- OBSERVACIONES -->
+                <TextBox materialDesign:HintAssist.Hint="Observaciones"
+                         x:Name="txtObservacionesReparacion"
+                         Text="{Binding reparacion.Observaciones, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         AcceptsReturn="True"
+                         Height="80"
+                         TextWrapping="Wrap"
+                         Margin="0,0,0,15"/>
+
+                <!-- TIEMPO -->
+                <TextBox materialDesign:HintAssist.Hint="Tiempo"
+                         x:Name="txtTiempoReparacion"
+                         Text="{Binding reparacion.Tiempo, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                         PreviewTextInput="SoloNumeros"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         Margin="0,0,0,15"/>
+
+                <!-- FECHA -->
+                <DatePicker x:Name="dpFechaReparacion"
+                            SelectedDate="{Binding reparacion.Fecha, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                            Margin="0,0,0,25"/>
+
+                <!-- BOTONES -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="Cancelar"
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            x:Name="btnCancelar"
+                            Click="btnCancelarReparacion_Click"
+                            Margin="0,0,10,0"/>
+                    <Button Content="Guardar"
+                            x:Name="btnGuardarReparacion"
+                            Click="btnGuardarReparacion_Click"
+                            Style="{StaticResource MaterialDesignRaisedButton}"/>
+                </StackPanel>
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</mah:MetroWindow>

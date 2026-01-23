@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\windows10\source\repos\ProyectoIker\ProyectoIker\App.xaml
-11-1302648366
+131061073974
 
-69-970505355
+71-1353547793
 2421431116251
-Frontend\ControlUsuario\UCClientes.xaml;Frontend\ControlUsuario\UCEmpleados.xaml;Frontend\ControlUsuario\UCProductos.xaml;Frontend\ControlUsuario\UCPromociones.xaml;Frontend\ControlUsuario\UCReparaciones.xaml;Frontend\Dialogos\DialogoEmpleado.xaml;Frontend\Dialogos\DialogoProductos.xaml;Frontend\Dialogos\Login.xaml;Frontend\Mensajes\MensajeDialogo.xaml;Frontend\Mensajes\VentanaMensaje.xaml;MainWindow.xaml;
+Frontend\ControlUsuario\UCClientes.xaml;Frontend\ControlUsuario\UCEmpleados.xaml;Frontend\ControlUsuario\UCProductos.xaml;Frontend\ControlUsuario\UCPromociones.xaml;Frontend\ControlUsuario\UCReparaciones.xaml;Frontend\Dialogos\DialogoEmpleados.xaml;Frontend\Dialogos\DialogoProductos.xaml;Frontend\Dialogos\DialogoPromociones.xaml;Frontend\Dialogos\DialogoReparaciones.xaml;Frontend\Dialogos\Login.xaml;Frontend\Mensajes\MensajeDialogo.xaml;Frontend\Mensajes\VentanaMensaje.xaml;MainWindow.xaml;
 
-False
+True
 

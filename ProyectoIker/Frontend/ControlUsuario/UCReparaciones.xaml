@@ -26,7 +26,7 @@
                     <DataGridTextColumn Header="ID REPARACIÓN" Binding="{Binding Id}"/>
                     <DataGridTextColumn Header="DESCRIPCION" Binding="{Binding Descripcion}"/>
                     <DataGridTextColumn Header="OBSERVACIONES" Binding="{Binding Observaciones}"/>
-                    <DataGridTextColumn Header="TIEMPO" Binding="{Binding Tiempo}"/> 
+                    <DataGridTextColumn Header="TIEMPO (H)" Binding="{Binding Tiempo}"/> 
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>

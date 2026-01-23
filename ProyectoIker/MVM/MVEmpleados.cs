@@ -33,6 +33,40 @@ namespace ProyectoIker.MVM
 
         public List<Empleado> listaEmpleados => _listaEmpleados;
 
+        public async Task<bool> GuardarEmpleadoAsync()
+        {
+            bool correcto = true;
+            try
+            {
+                // OJO: cambia "CodigoUnico" por la PK real de Empleado (IdEmpleado, CodigoEmpleado, etc.)
+                if (empleado.CodigoUnico == 0)
+                {
+                    // Nuevo empleado
+                    correcto = await AddAsync<Empleado>(_empleadoRepository, empleado);
+                }
+                else
+                {
+                    // Actualizar empleado existente
+                    correcto = await UpdateAsync<Empleado>(_empleadoRepository, empleado);
+                }
+
+                if (correcto)
+                {
+                    await Inicializa(); // refrescar lista
+                }
+            }
+            catch
+            {
+                MensajeError.Mostrar(
+                    "GESTIÓN EMPLEADOS",
+                    "Error al guardar el empleado\nNo puedo conectar con la base de datos",
+                    0);
+                correcto = false;
+            }
+
+            return correcto;
+        }
+
 
         public async Task Inicializa()
         {
@@ -51,5 +85,7 @@ namespace ProyectoIker.MVM
             }
 
         }
+
+
     }
 }

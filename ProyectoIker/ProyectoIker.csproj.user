@@ -17,10 +17,16 @@
     <Compile Update="Frontend\ControlUsuario\UCReparaciones.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Frontend\Dialogos\DialogoEmpleado.xaml.cs">
+    <Compile Update="Frontend\Dialogos\DialogoEmpleados.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Frontend\Dialogos\DialogoProductos.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frontend\Dialogos\DialogoPromociones.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frontend\Dialogos\DialogoReparaciones.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Frontend\Dialogos\Login.xaml.cs">
