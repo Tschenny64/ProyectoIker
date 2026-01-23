@@ -73,6 +73,7 @@
             <Expander Header="Promociones" Foreground="White" Margin="10" Background="Transparent">
                 <StackPanel>
                     <Button Content="Listar promociones"
+                            Click="UCPromociones_Click"
                             Style="{StaticResource MaterialDesignFlatButton}"
                             Foreground="White"/>
                     <Button Content="Añadir promoción"

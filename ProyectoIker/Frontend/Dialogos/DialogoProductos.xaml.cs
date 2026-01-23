@@ -42,20 +42,32 @@ namespace ProyectoIker.Frontend.Dialogos
 
         private async void btnGuardarProducto_Click(object sender, RoutedEventArgs e)
         {
-            bool exito = await _mvProductos.GuardarProductoAsync();
-            if (exito)
+            try
             {
-                MessageBox.Show("Producto guardado correctamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+                bool exito = await _mvProductos.GuardarProductoAsync();
+                if (exito)
+                {
+                    MessageBox.Show("Producto guardado correctamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al guardar el producto", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Error al guardar el producto", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Error inesperado: " + ex.Message,
+                                "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
         private void btnCancelarProducto_Click(object sender, RoutedEventArgs e)
         {
             DialogResult = false;
+        }
+        private void SoloNumeros(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !e.Text.All(char.IsDigit);
         }
     }
 }

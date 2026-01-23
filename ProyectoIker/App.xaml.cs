@@ -38,21 +38,25 @@ namespace ProyectoIker
             services.AddScoped<IGenericRepository<Producto>, ProductoRepository>();
             services.AddScoped<IGenericRepository<Empleado>, EmpleadoRepository>();
             services.AddScoped<IGenericRepository<Reparacione>, ReparacioneRepository>();
+            services.AddScoped<IGenericRepository<Promocione>, PromocioneRepository>();
 
             services.AddScoped<ProductoRepository>();
             services.AddScoped<EmpleadoRepository>();
             services.AddScoped<ReparacioneRepository>();
+            services.AddScoped<PromocioneRepository>();
 
             services.AddTransient<Login>();
 
             services.AddTransient<UCProductos>();
             services.AddTransient<UCEmpleados>();
             services.AddTransient<UCReparaciones>();
+            services.AddTransient<UCPromociones>();
             services.AddTransient<DialogoProductos>();
 
             services.AddTransient<MVProductos>();
             services.AddTransient<MVEmpleados>();
             services.AddTransient<MVReparaciones>();
+            services.AddTransient<MVPromociones>();
 
         }
 

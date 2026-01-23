@@ -4,9 +4,32 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProyectoIker.Frontend.ControlUsuario"
+             x:Name="ucPromociones"
+             Loaded="ucPromociones_Loaded"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <DockPanel>
+        <Grid DockPanel.Dock="Top">
+            <TextBlock Text="LISTADO DE PROMOCIONES"
+                       FontSize="25" FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="20"
+                       Foreground="Purple"/>
+        </Grid>
+        <Grid>
+            <DataGrid ItemsSource="{Binding listaPromociones}"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      ColumnWidth="*"
+                      RowDetailsVisibilityMode="VisibleWhenSelected">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID PROMOCIÓN" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="NOMBRE" Binding="{Binding Nombre}"/>
+                    <DataGridTextColumn Header="DESCRIPCION" Binding="{Binding Descripcion}"/>
+                    <DataGridTextColumn Header="FECHA ENVIO" Binding="{Binding FechaEnvio}"/>
+                    <DataGridTextColumn Header="DESCUENTO (%)" Binding="{Binding Descuento}"/> 
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </DockPanel>
 </UserControl>

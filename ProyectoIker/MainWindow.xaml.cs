@@ -24,12 +24,14 @@ namespace ProyectoIker
         private UCProductos _ucProductos;
         private UCEmpleados _ucEmpleados;
         private UCReparaciones _ucReparaciones;
+        private UCPromociones _ucPromociones;
 
         public MainWindow(DialogoProductos dialogoProductos,
                           IServiceProvider serviceProvider,
                           UCProductos ucProductos,
                           UCEmpleados ucEmpleados,
-                          UCReparaciones ucReparaciones
+                          UCReparaciones ucReparaciones,
+                          UCPromociones ucPromociones
                             )
         {
             InitializeComponent();
@@ -37,6 +39,7 @@ namespace ProyectoIker
             _ucProductos = ucProductos;
             _ucEmpleados = ucEmpleados;
             _ucReparaciones = ucReparaciones;
+            _ucPromociones = ucPromociones;
         }
 
         private void btnAnyadirProducto_Click(object sender, RoutedEventArgs e)
@@ -61,6 +64,12 @@ namespace ProyectoIker
         {
             panelPrincipal.Children.Clear();
             panelPrincipal.Children.Add(_ucReparaciones);
+        }
+
+        private void UCPromociones_Click(object sender, RoutedEventArgs e)
+        {
+            panelPrincipal.Children.Clear();
+            panelPrincipal.Children.Add(_ucPromociones);
         }
     }
 }

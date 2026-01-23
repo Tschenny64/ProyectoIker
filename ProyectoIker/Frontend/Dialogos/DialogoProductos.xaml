@@ -11,7 +11,7 @@
       Loaded="dialogoProductos_Loaded"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="DialogoProductos"
-      Background="#F5F5F5">
+      Background="Transparent">
 
         <Grid Margin="30">
             <Border Background="White"
@@ -30,12 +30,16 @@
 
                     <!-- NOMBRE -->
                     <TextBox materialDesign:HintAssist.Hint="Nombre"
+                         x:Name="txtNombreProducto"
+                         Text="{Binding producto.Nombre, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
                          Style="{StaticResource MaterialDesignOutlinedTextBox}"
                          Margin="0,0,0,15"/>
 
                     <!-- DESCRIPCIÓN TÉCNICA -->
                     <TextBox materialDesign:HintAssist.Hint="Descripción técnica"
                          Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         x:Name="txtDescripcionTecnicaProducto"
+                             Text="{Binding producto.DescripcionTecnica, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
                          AcceptsReturn="True"
                          Height="80"
                          TextWrapping="Wrap"
@@ -44,11 +48,17 @@
                     <!-- PRECIO UNITARIO -->
                     <TextBox materialDesign:HintAssist.Hint="Precio unitario"
                          Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         x:Name="txtPrecioUnitarioProducto"
+                             Text="{Binding producto.PrecioUnitario, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                             PreviewTextInput="SoloNumeros"
                          Margin="0,0,0,15"/>
 
                     <!-- CANTIDAD INVENTARIO -->
                     <TextBox materialDesign:HintAssist.Hint="Cantidad en inventario"
                          Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         x:Name="txtCantidadInventarioProducto"
+                             PreviewTextInput="SoloNumeros"
+                             Text="{Binding producto.CantidadInventario, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
                          Margin="0,0,0,25"/>
 
                     <!-- BOTONES -->

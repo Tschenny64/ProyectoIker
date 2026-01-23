@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9D026360-2A51-4B63-A826-40B923D4D996}|ProyectoIker\\ProyectoIker.csproj|c:\\users\\windows10\\source\\repos\\proyectoiker\\proyectoiker\\mvm\\mvreparaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D026360-2A51-4B63-A826-40B923D4D996}|ProyectoIker\\ProyectoIker.csproj|solutionrelative:proyectoiker\\mvm\\mvreparaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D026360-2A51-4B63-A826-40B923D4D996}|ProyectoIker\\ProyectoIker.csproj|c:\\users\\windows10\\source\\repos\\proyectoiker\\proyectoiker\\frontend\\dialogos\\dialogoproductos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9D026360-2A51-4B63-A826-40B923D4D996}|ProyectoIker\\ProyectoIker.csproj|solutionrelative:proyectoiker\\frontend\\dialogos\\dialogoproductos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D026360-2A51-4B63-A826-40B923D4D996}|ProyectoIker\\ProyectoIker.csproj|c:\\users\\windows10\\source\\repos\\proyectoiker\\proyectoiker\\frontend\\controlusuario\\ucreparaciones.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9D026360-2A51-4B63-A826-40B923D4D996}|ProyectoIker\\ProyectoIker.csproj|solutionrelative:proyectoiker\\frontend\\controlusuario\\ucreparaciones.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{9D026360-2A51-4B63-A826-40B923D4D996}|ProyectoIker\\ProyectoIker.csproj|c:\\users\\windows10\\source\\repos\\proyectoiker\\proyectoiker\\frontend\\dialogos\\dialogoproductos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D026360-2A51-4B63-A826-40B923D4D996}|ProyectoIker\\ProyectoIker.csproj|solutionrelative:proyectoiker\\frontend\\dialogos\\dialogoproductos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D026360-2A51-4B63-A826-40B923D4D996}|ProyectoIker\\ProyectoIker.csproj|c:\\users\\windows10\\source\\repos\\proyectoiker\\proyectoiker\\frontend\\controlusuario\\ucreparaciones.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D026360-2A51-4B63-A826-40B923D4D996}|ProyectoIker\\ProyectoIker.csproj|solutionrelative:proyectoiker\\frontend\\controlusuario\\ucreparaciones.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D026360-2A51-4B63-A826-40B923D4D996}|ProyectoIker\\ProyectoIker.csproj|c:\\users\\windows10\\source\\repos\\proyectoiker\\proyectoiker\\frontend\\controlusuario\\ucpromociones.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9D026360-2A51-4B63-A826-40B923D4D996}|ProyectoIker\\ProyectoIker.csproj|solutionrelative:proyectoiker\\frontend\\controlusuario\\ucpromociones.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D026360-2A51-4B63-A826-40B923D4D996}|ProyectoIker\\ProyectoIker.csproj|c:\\users\\windows10\\source\\repos\\proyectoiker\\proyectoiker\\mvm\\mvpromociones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D026360-2A51-4B63-A826-40B923D4D996}|ProyectoIker\\ProyectoIker.csproj|solutionrelative:proyectoiker\\mvm\\mvpromociones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D026360-2A51-4B63-A826-40B923D4D996}|ProyectoIker\\ProyectoIker.csproj|c:\\users\\windows10\\source\\repos\\proyectoiker\\proyectoiker\\frontend\\controlusuario\\ucpromociones.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D026360-2A51-4B63-A826-40B923D4D996}|ProyectoIker\\ProyectoIker.csproj|solutionrelative:proyectoiker\\frontend\\controlusuario\\ucpromociones.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,40 +38,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MVReparaciones.cs",
-              "DocumentMoniker": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\MVM\\MVReparaciones.cs",
-              "RelativeDocumentMoniker": "ProyectoIker\\MVM\\MVReparaciones.cs",
-              "ToolTip": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\MVM\\MVReparaciones.cs",
-              "RelativeToolTip": "ProyectoIker\\MVM\\MVReparaciones.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAABsAAABJAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DialogoProductos.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\Frontend\\Dialogos\\DialogoProductos.xaml.cs",
+              "RelativeDocumentMoniker": "ProyectoIker\\Frontend\\Dialogos\\DialogoProductos.xaml.cs",
+              "ToolTip": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\Frontend\\Dialogos\\DialogoProductos.xaml.cs",
+              "RelativeToolTip": "ProyectoIker\\Frontend\\Dialogos\\DialogoProductos.xaml.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAmwDcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T11:12:05.198Z",
+              "WhenOpened": "2026-01-23T07:18:55.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DialogoProductos.xaml",
+              "DocumentMoniker": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\Frontend\\Dialogos\\DialogoProductos.xaml",
+              "RelativeDocumentMoniker": "ProyectoIker\\Frontend\\Dialogos\\DialogoProductos.xaml",
+              "ToolTip": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\Frontend\\Dialogos\\DialogoProductos.xaml",
+              "RelativeToolTip": "ProyectoIker\\Frontend\\Dialogos\\DialogoProductos.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-23T07:12:44.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UCPromociones.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\Frontend\\ControlUsuario\\UCPromociones.xaml.cs",
+              "RelativeDocumentMoniker": "ProyectoIker\\Frontend\\ControlUsuario\\UCPromociones.xaml.cs",
+              "ToolTip": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\Frontend\\ControlUsuario\\UCPromociones.xaml.cs",
+              "RelativeToolTip": "ProyectoIker\\Frontend\\ControlUsuario\\UCPromociones.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T07:09:03.39Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UCReparaciones.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\Frontend\\ControlUsuario\\UCReparaciones.xaml.cs",
-              "RelativeDocumentMoniker": "ProyectoIker\\Frontend\\ControlUsuario\\UCReparaciones.xaml.cs",
-              "ToolTip": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\Frontend\\ControlUsuario\\UCReparaciones.xaml.cs",
-              "RelativeToolTip": "ProyectoIker\\Frontend\\ControlUsuario\\UCReparaciones.xaml.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T11:11:30.648Z",
+              "Title": "UCPromociones.xaml",
+              "DocumentMoniker": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\Frontend\\ControlUsuario\\UCPromociones.xaml",
+              "RelativeDocumentMoniker": "ProyectoIker\\Frontend\\ControlUsuario\\UCPromociones.xaml",
+              "ToolTip": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\Frontend\\ControlUsuario\\UCPromociones.xaml",
+              "RelativeToolTip": "ProyectoIker\\Frontend\\ControlUsuario\\UCPromociones.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-23T07:08:56.726Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UCReparaciones.xaml",
-              "DocumentMoniker": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\Frontend\\ControlUsuario\\UCReparaciones.xaml",
-              "RelativeDocumentMoniker": "ProyectoIker\\Frontend\\ControlUsuario\\UCReparaciones.xaml",
-              "ToolTip": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\Frontend\\ControlUsuario\\UCReparaciones.xaml",
-              "RelativeToolTip": "ProyectoIker\\Frontend\\ControlUsuario\\UCReparaciones.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-22T11:04:00.434Z",
+              "DocumentIndex": 3,
+              "Title": "MVPromociones.cs",
+              "DocumentMoniker": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\MVM\\MVPromociones.cs",
+              "RelativeDocumentMoniker": "ProyectoIker\\MVM\\MVPromociones.cs",
+              "ToolTip": "C:\\Users\\windows10\\source\\repos\\ProyectoIker\\ProyectoIker\\MVM\\MVPromociones.cs",
+              "RelativeToolTip": "ProyectoIker\\MVM\\MVPromociones.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T07:08:31.575Z",
               "EditorCaption": ""
             }
           ]

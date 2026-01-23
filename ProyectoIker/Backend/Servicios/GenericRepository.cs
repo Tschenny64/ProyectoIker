@@ -126,14 +126,23 @@ namespace ProyectoIker.Backend.Servicios
                 return query;
             }
 
-        public Task<IEnumerable<T>> GetAllAsync()
+        public async Task<IEnumerable<T>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _dbSet.AsNoTracking().ToListAsync().ConfigureAwait(false);
         }
 
-        public Task RemoveByIdAsync(int id)
+        public async Task RemoveByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var entity = await GetByIdAsync(id).ConfigureAwait(false);
+            if (entity is null)
+            {
+                _logger.LogWarning("Intento de eliminacin: {Entity} con id {Id} no encontrada.", typeof(T).Name, id);
+                return;
+            }
+
+            _dbSet.Remove(entity);
+            await _context.SaveChangesAsync().ConfigureAwait(false);
+            _logger.LogInformation("{Entity} con id {Id} eliminada.", typeof(T).Name, id);
         }
     }
     }
