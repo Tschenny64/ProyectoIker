@@ -68,7 +68,7 @@
                          ItemsSource="{Binding Roles}"
                          DisplayMemberPath="Nombre"
                          SelectedValuePath="Id"
-                         SelectedItem="{Binding empleado.RolId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         SelectedItem="{Binding empleado.Rol, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
                          Margin="0,0,0,15"/>
 

@@ -40,13 +40,17 @@ namespace ProyectoIker.MVM
         }
 
 
-        public List<Empleado> listaEmpleados => _listaEmpleados;
-
+        public List<Empleado> listaEmpleados
+        {
+            get => _listaEmpleados;
+            set => SetProperty(ref _listaEmpleados, value);
+        }
         public async Task<bool> GuardarEmpleadoAsync()
         {
             bool correcto = true;
             try
             {
+                empleado.RolId = empleado.Rol?.Id;
                 // OJO: cambia "CodigoUnico" por la PK real de Empleado (IdEmpleado, CodigoEmpleado, etc.)
                 if (empleado.CodigoUnico == 0)
                 {
@@ -81,7 +85,7 @@ namespace ProyectoIker.MVM
         {
             try
             {
-                _listaEmpleados = await GetAllAsync<Empleado>(_empleadoRepository);
+                listaEmpleados = await GetAllAsync<Empleado>(_empleadoRepository);
                 Roles = await GetAllAsync<Role>(_roleRepository);
             }
             catch
