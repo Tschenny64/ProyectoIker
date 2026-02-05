@@ -15,6 +15,7 @@ namespace ProyectoIker.MVM
         private Empleado _empleado;
 
         private EmpleadoRepository _empleadoRepository;
+        private RoleRepository _roleRepository;
 
         private List<Empleado> _listaEmpleados;
 
@@ -24,12 +25,20 @@ namespace ProyectoIker.MVM
             set => SetProperty(ref _empleado, value);
         }
 
+        private List<Role> _roles;
+        public List<Role> Roles
+        {
+            get => _roles;
+            set => SetProperty(ref _roles, value);
+        }
 
-        public MVEmpleados(EmpleadoRepository empleadoRepository)
+        public MVEmpleados(EmpleadoRepository empleadoRepository, RoleRepository roleRepository)
         {
             _empleadoRepository = empleadoRepository;
+            _roleRepository = roleRepository;
             _empleado = new Empleado();
         }
+
 
         public List<Empleado> listaEmpleados => _listaEmpleados;
 
@@ -73,8 +82,7 @@ namespace ProyectoIker.MVM
             try
             {
                 _listaEmpleados = await GetAllAsync<Empleado>(_empleadoRepository);
-
-
+                Roles = await GetAllAsync<Role>(_roleRepository);
             }
             catch
             {

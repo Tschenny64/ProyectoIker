@@ -39,11 +39,13 @@ namespace ProyectoIker
             services.AddScoped<IGenericRepository<Empleado>, EmpleadoRepository>();
             services.AddScoped<IGenericRepository<Reparacione>, ReparacioneRepository>();
             services.AddScoped<IGenericRepository<Promocione>, PromocioneRepository>();
+            services.AddScoped<IGenericRepository<Role>, RoleRepository>();
 
             services.AddScoped<ProductoRepository>();
             services.AddScoped<EmpleadoRepository>();
             services.AddScoped<ReparacioneRepository>();
             services.AddScoped<PromocioneRepository>();
+            services.AddScoped<RoleRepository>();
 
             services.AddTransient<Login>();
 

@@ -1,3 +1,5 @@
+using ProyectoIker.Backend.Modelo;
+using ProyectoIker.Backend.Servicios;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
@@ -6,6 +8,9 @@ namespace ProyectoIker.MVM.Base
 {
     public abstract class BaseViewModel : INotifyPropertyChanged
     {
+
+
+        private IGenericRepository<Role> _roleRepository;
         public event PropertyChangedEventHandler? PropertyChanged;
         /// <summary>
         /// Método que se ejecuta cuando se produce un cambio en una propiedad

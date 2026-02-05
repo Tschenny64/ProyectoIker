@@ -43,6 +43,7 @@ public partial class Empleado
     public string? Password { get; set; }
 
     [Column("Rol_ID")]
+    [Required(ErrorMessage = "El rol es obligatorio")]
     public int? RolId { get; set; }
 
     [ForeignKey("RolId")]
