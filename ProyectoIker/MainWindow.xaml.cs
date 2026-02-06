@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using ProyectoIker.Frontend.ControlUsuario;
 using ProyectoIker.Frontend.Dialogos;
+using ProyectoIker.MVM;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -76,10 +77,13 @@ namespace ProyectoIker
             _dialogoReparaciones = _serviceProvider.GetRequiredService<DialogoReparaciones>();
         }
 
-        private void UCEmpleados_Click(object sender, RoutedEventArgs e)
+        private async void UCEmpleados_Click(object sender, RoutedEventArgs e)
         {
             panelPrincipal.Children.Clear();
             panelPrincipal.Children.Add(_ucEmpleados);
+
+            if (_ucEmpleados.DataContext is MVEmpleados vm)
+                await vm.Inicializa();
         }
 
         private void UCProductos_Click(object sender, RoutedEventArgs e)

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace ProyectoIker.MVM
 {
@@ -50,30 +51,25 @@ namespace ProyectoIker.MVM
             bool correcto = true;
             try
             {
+                // Asignar FK y evitar insertar Role
                 empleado.RolId = empleado.Rol?.Id;
-                // OJO: cambia "CodigoUnico" por la PK real de Empleado (IdEmpleado, CodigoEmpleado, etc.)
+                empleado.Rol = null; // CLAVE: evita Duplicate entry en roles
+
                 if (empleado.CodigoUnico == 0)
                 {
-                    // Nuevo empleado
                     correcto = await AddAsync<Empleado>(_empleadoRepository, empleado);
                 }
                 else
                 {
-                    // Actualizar empleado existente
                     correcto = await UpdateAsync<Empleado>(_empleadoRepository, empleado);
                 }
 
                 if (correcto)
-                {
-                    await Inicializa(); // refrescar lista
-                }
+                    await Inicializa();
             }
-            catch
+            catch (Exception ex)
             {
-                MensajeError.Mostrar(
-                    "GESTIÓN EMPLEADOS",
-                    "Error al guardar el empleado\nNo puedo conectar con la base de datos",
-                    0);
+                MessageBox.Show(ex.ToString(), "ERROR al guardar empleado");
                 correcto = false;
             }
 
@@ -81,19 +77,27 @@ namespace ProyectoIker.MVM
         }
 
 
+
         public async Task Inicializa()
         {
             try
             {
                 listaEmpleados = await GetAllAsync<Empleado>(_empleadoRepository);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "ERROR al listar empleados");
+                listaEmpleados = new List<Empleado>();
+            }
+
+            try
+            {
                 Roles = await GetAllAsync<Role>(_roleRepository);
             }
-            catch
+            catch (Exception ex)
             {
-                MensajeError.Mostrar(
-                  "GESTIÓN USUARIOS",
-                  "Error al cargar datos de usuario",
-                  0);
+                System.Diagnostics.Debug.WriteLine(ex);
+                Roles = new List<Role>();
             }
 
         }

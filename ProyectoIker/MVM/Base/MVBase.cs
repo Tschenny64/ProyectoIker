@@ -117,7 +117,7 @@ namespace ProyectoIker.MVM.Base
             }
             catch (Exception ex)
             {
-                SnackbarMessageQueue.Enqueue($"Error al añadir elemento: {ex.Message}");
+                MessageBox.Show(ex.ToString(), "ERROR AddAsync");
                 return false;
             }
         }
@@ -131,7 +131,7 @@ namespace ProyectoIker.MVM.Base
             }
             catch (Exception ex)
             {
-                SnackbarMessageQueue.Enqueue($"Error al actualizar elemento: {ex.Message}");
+                MessageBox.Show(ex.ToString(), "ERROR UpdateAsync");
                 return false;
             }
         }

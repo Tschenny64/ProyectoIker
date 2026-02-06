@@ -30,9 +30,8 @@ namespace ProyectoIker.Frontend.ControlUsuario
 
         private async void ucEmpleados_Loaded(object sender, RoutedEventArgs e)
         {
+            DataContext = _mvEmpleados;
             await _mvEmpleados.Inicializa();
-            this.DataContext = _mvEmpleados;
-
         }
     }
 }
